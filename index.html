@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="mainContainer cursor-default bg-[#8CC461] w-full h-screen flex flex-col p-4 items-center">
+        <div class="UpperContainer border-2 rounded-lg w-[40%] h-[20%] mt-[15vh] flex justify-between  px-4 py-2">
+            <div class="gamename flex flex-col text-5xl text-white uppercase ">
+                <h1>ROCK</h1>
+                <h1>PAPER</h1>
+                <h1>SCISSORS</h1>
+            </div>
+            <div class="scoreBoard flex items-center gap-4">
+                <div class="bg-zinc-200 h-full w-[8vw]">
+                    <h1 class="  text-xl text-zinc-500 text-center text-wrap h-[5vh]">COMPUTER SCORE</h1>
+                    <h1 class=" compScore text-8xl text-center">0</h1>
+                </div>
+                <div class="bg-zinc-200 h-full w-[8vw]">
+                    <h1 class="  text-xl text-zinc-500 text-center text-wrap h-[5vh]">Your Score</h1>
+                    <h1 class=" yourScore text-8xl text-center">0</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="lowerContainer  relative  h-[40%] mt-[12vh] flex flex-col gap-[10vh] justify-center items-center">
+            <img class="triangle  absolute rotate-180 size-[20vw] " src="./images/triangles.png" alt="">
+            <div class="rockAndpaper flex items-center justify-center">
+                <div class="rock z-10    w-[8vw] bg-white  border-[1.5vh] p-4 border-[#0774B6] rounded-[50%]">
+                    <img src="./images/fist.png" alt="">
+                </div>
+                <div class=" bg-[#324723] w-[12vw] h-[2vh] invisible">
+
+                </div>
+                <div class="paper z-10 w-[8vw] bg-white border-[1.5vh] p-4 border-[#bd00ff] rounded-[50%]"><img
+                        src="./images/hand-paper.png" alt=""></div>
+
+            </div>
+
+
+            <div class="scissors z-10 w-[8vw] bg-white  border-[1.5vh] p-4 border-[#FFA943] rounded-[50%]"><img
+                    src="./images/scissors.png" alt=""></div>
+        </div>
+
+        <div
+            class="rulesWindow invisible absolute mt-[50vh] ml-[75vw] w-[16vw] h-[37vh] bg-[#004429] p-4 border-4 rounded-md border-white">
+            <img src="./images/gamerules.PNG" alt="">
+            <div class="cross bg-red-600 relative w-[5vh] h-[4vh] rounded-[50%] text-center mt-[-37vh] ml-[13vw]  ">
+                <h1 class="uppercase font-extrabold text-white py-2 text-lg">X</h1>
+            </div>
+        </div>
+
+        <div
+            class="scoreComparing invisible  absolute mt-[40vh] w-[60vw] h-[50vh]   flex  gap-[10vh] justify-center items-center">
+            <div class="youPicked flex flex-col justify-center items-center gap-[4vh]">
+                <h1 class="  text-white uppercase">you picked</h1>
+                <div class="rock z-10     w-[8vw] bg-white  border-[1.5vh] p-4 border-[#2ae562] rounded-[50%]  ">
+                    <img id="choiceImage" src="./images/fist.png" alt="">
+                </div>
+            </div>
+            <div class="decision flex flex-col justify-center items-center">
+                <h1 id="decisionText" class="text-white font-bold text-[4vh]">YOU WIN</h1>
+                <h1 class="text-white font-bold text-[2vh]">AGAINST PC</h1>
+                <button class="playAgianbtn bg-white font-sans rounded-lg px-4 uppercase mt-2 ">Play again</button>
+            </div>
+            <div class="pcPicked flex flex-col justify-center items-center gap-[4vh]">
+                <h1 class="  text-white uppercase">PC picked</h1>
+                <div class="rock z-10    w-[8vw] bg-white  border-[1.5vh] p-4 border-[#2ae562] rounded-[50%] ">
+                    <img id="pcImage" src="./images/hand-paper.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="end-section flex justify-end items-center gap-4 w-full h-[20vh]">
+            <div class="rules border-white border-2 rounded-md px-2 uppercase text-white">
+                <h1>RULES</h1>
+            </div>
+            <div class="nextbtn  border-white border-2 rounded-md px-2 uppercase text-white">
+                <h1>NEXT</h1>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="hurrayContainer invisible absolute mt-[-100vh]  flex flex-col justify-center items-center w-full h-screen bg-[#8CC461]">
+        <div class="p-8"><img src="./images/trophy.png" alt=""></div>
+        <div class="flex flex-col justify-center items-center">
+            <h1 class="font-bold text-[10vh]">HURRAY!!!</h1>
+            <h1 class="font-bold text-[5vh]">YOU WON THE GAME</h1>
+            <button class="playAgianSecbtn  bg-white font-sans rounded-lg px-4 uppercase mt-2 ">Play again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
